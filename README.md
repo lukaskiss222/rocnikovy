@@ -27,7 +27,7 @@ Preto finalne riesenie, ktore je jednoduche a rychle, bolo navrhnute pomocou kni
 
 ### Funguje prefektne implementovane
 * ```crypto.js``` je vysledny produkt, jednoducho navrchnuty cez promises v javascripte. Umoznuje rychle podpisanie a overenie podpisu asychronne. Lachko sa bude dat implementovat do weboveho rozhrania.
-* ```crypto2.js`` je podobny koncept ako ```crypto.js```, ale je len na overenie podpisu.
+* ```crypto2.js``` je podobny koncept ako ```crypto.js```, ale je len na overenie podpisu.
 
 ### Zaver
 Pre dalsie vyuzitia odporucam vyuzit programy crypto.js a crypto2.js a na nich dalej pracovat.
