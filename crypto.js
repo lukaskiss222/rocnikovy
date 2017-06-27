@@ -3,7 +3,7 @@ var P11Crypto = require("node-webcrypto-p11");
 var crypto = new P11Crypto.WebCrypto({
     library: "/usr/lib/eidklient/libpkcs11_sig_x64.so", // path to the PKCS#11 library
     slot: 1, // index of slot
-    pin: "271828",  //here your BOK code
+    pin: "xxxxxx",  //here your BOK code
 });
 
 // you can do it in you local js file
