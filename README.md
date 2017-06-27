@@ -10,7 +10,7 @@ Dalej treba kniznice do javascriptu:
 * base64url
 * sha1
 
-Tieto ostatne kniznice netreba, su len iny sposob na ziskanie klucou. (Ktory sa mi nepodarilo sfukcnit).
+Tieto ostatne kniznice netreba, su len iny sposob na ziskanie klucou. (Pre pokus1).
 Je ocividne, ze cez node-webcrypto-p11 je to jednoduchsie.
 * jssha
 * pkijs
@@ -18,14 +18,14 @@ Je ocividne, ze cez node-webcrypto-p11 je to jednoduchsie.
 * node-webcrypto-ossl
 
 
-### Nefunguje, pokusi o podpisanie
-* ```sign1.js``` je subor na podpisovanie retazcou, v premennej ```MESSAGE``` sa uvedie retazec, ktory sa ma podpisat OP. Program pri spusteny sa snazim pripojit citacke a neskor si vypyta BOK kod na podpisanie spravy. Vid subor ```output.txt```. Je plus v nom implementovane overovanie aj podpisu. (Zial, nie vzdy to funguje).
+### Pokus1 (viacej robustne)
+* ```sign1.js``` je subor na podpisovanie retazcou, v premennej ```MESSAGE``` sa uvedie retazec, ktory sa ma podpisat OP. Program pri spusteny sa snazim pripojit citacke a neskor si vypyta BOK kod na podpisanie spravy. Vid subor ```output.txt```. Je plus v nom implementovane overovanie aj podpisu.
 * ```sign2.js``` je subor na podpisovanie, ktory vyuziva ine kniznice, bol to prvy nacrt, lebo niake veci nefungovali cez ```graphene-pk11```. (Ukazalo sa, ze to tiez nefunguje korektne).
 
-Nakoniec sa ukazalo, ze takto je to neefektivne a tazko sa to bude implementovat do weboveho rozhrania.
+Takto to implementovat, je narocnejsie, no umoznuje to vacsiu robustnost.
 Preto finalne riesenie, ktore je jednoduche a rychle, bolo navrhnute pomocou kniznice node-webcrypto-p11.
 
-### Funguje prefektne implementovane
+### Pokus1 (menej kodu, lachko implementovatelne)
 * ```crypto.js``` je vysledny produkt, jednoducho navrchnuty cez promises v javascripte. Umoznuje rychle podpisanie a overenie podpisu asychronne. Lachko sa bude dat implementovat do weboveho rozhrania.
 * ```crypto2.js``` je podobny koncept ako ```crypto.js```, ale je len na overenie podpisu.
 
